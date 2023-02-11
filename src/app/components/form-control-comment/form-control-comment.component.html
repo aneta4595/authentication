@@ -1,0 +1,14 @@
+
+  <div>
+
+      <textarea
+
+        placeholder="Write your comment..."
+        [formControl]="comment"
+      >
+      </textarea>
+      <mat-error *ngIf="comment!.invalid"
+        >comments need to have minimum 4 words</mat-error
+      >
+
+  </div>
