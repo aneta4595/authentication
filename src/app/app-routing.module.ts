@@ -9,6 +9,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { AuthenticationLoginFormComponent } from './components/authentication-login-form/authentication-login-form.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { AuthenticationRegisterFormComponent } from './components/authentication-register-form/authentication-register-form.component';
+import { BackendValidationComponent } from './components/backend-validation/backend-validation.component';
 import { FormControlNameComponentModule } from './components/form-control-name/form-control-name.component-module';
 import { FormControlAgeComponentModule } from './components/form-control-age/form-control-age.component-module';
 import { FormControlEmailComponentModule } from './components/form-control-email/form-control-email.component-module';
@@ -18,6 +19,7 @@ import { ErrorComponentModule } from './components/error/error.component-module'
 import { AuthenticationLoginFormComponentModule } from './components/authentication-login-form/authentication-login-form.component-module';
 import { HomePageComponentModule } from './components/home-page/home-page.component-module';
 import { AuthenticationRegisterFormComponentModule } from './components/authentication-register-form/authentication-register-form.component-module';
+import { BackendValidationComponentModule } from './components/backend-validation/backend-validation.component-module';
 
 @NgModule({
   imports: [
@@ -30,7 +32,8 @@ import { AuthenticationRegisterFormComponentModule } from './components/authenti
       { path: 'error', component: ErrorComponent },
       { path: 'login-form', component: AuthenticationLoginFormComponent },
       { path: '', component: HomePageComponent },
-      { path: 'register', component: AuthenticationRegisterFormComponent }
+      { path: 'register', component: AuthenticationRegisterFormComponent },
+      { path: 'backend-validation', component: BackendValidationComponent }
     ]),
     FormControlNameComponentModule,
     FormControlAgeComponentModule,
@@ -40,7 +43,8 @@ import { AuthenticationRegisterFormComponentModule } from './components/authenti
     ErrorComponentModule,
     AuthenticationLoginFormComponentModule,
     HomePageComponentModule,
-    AuthenticationRegisterFormComponentModule
+    AuthenticationRegisterFormComponentModule,
+    BackendValidationComponentModule
   ],
   exports: [RouterModule],
 })

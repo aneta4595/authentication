@@ -6,10 +6,12 @@ import { LoginModel } from '../models/login.model';
 
 @Injectable({ providedIn: 'root' })
 export class LoginService {
-  constructor(private _httpClient: HttpClient) {
-  }
+  constructor(private _httpClient: HttpClient) {}
 
   loginCredentials(login: DataModel<LoginModel>): Observable<LoginModel> {
-    return this._httpClient.post<LoginModel>('https://us-central1-courses-auth.cloudfunctions.net/auth/login', login);
+    return this._httpClient.post<LoginModel>(
+      'https://us-central1-courses-auth.cloudfunctions.net/auth/login',
+      login
+    );
   }
 }
