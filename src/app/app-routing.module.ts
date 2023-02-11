@@ -10,6 +10,8 @@ import { AuthenticationLoginFormComponent } from './components/authentication-lo
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { AuthenticationRegisterFormComponent } from './components/authentication-register-form/authentication-register-form.component';
 import { BackendValidationComponent } from './components/backend-validation/backend-validation.component';
+import { RegisterValidationComponent } from './components/register-validation/register-validation.component';
+import { CrossValidationComponent } from './components/cross-validation/cross-validation.component';
 import { FormControlNameComponentModule } from './components/form-control-name/form-control-name.component-module';
 import { FormControlAgeComponentModule } from './components/form-control-age/form-control-age.component-module';
 import { FormControlEmailComponentModule } from './components/form-control-email/form-control-email.component-module';
@@ -20,6 +22,8 @@ import { AuthenticationLoginFormComponentModule } from './components/authenticat
 import { HomePageComponentModule } from './components/home-page/home-page.component-module';
 import { AuthenticationRegisterFormComponentModule } from './components/authentication-register-form/authentication-register-form.component-module';
 import { BackendValidationComponentModule } from './components/backend-validation/backend-validation.component-module';
+import { RegisterValidationComponentModule } from './components/register-validation/register-validation.component-module';
+import { CrossValidationComponentModule } from './components/cross-validation/cross-validation.component-module';
 
 @NgModule({
   imports: [
@@ -33,7 +37,9 @@ import { BackendValidationComponentModule } from './components/backend-validatio
       { path: 'login-form', component: AuthenticationLoginFormComponent },
       { path: '', component: HomePageComponent },
       { path: 'register', component: AuthenticationRegisterFormComponent },
-      { path: 'backend-validation', component: BackendValidationComponent }
+      { path: 'backend-validation', component: BackendValidationComponent },
+      { path: 'register-validation', component: RegisterValidationComponent },
+      { path: 'cross-validation', component: CrossValidationComponent }
     ]),
     FormControlNameComponentModule,
     FormControlAgeComponentModule,
@@ -44,7 +50,9 @@ import { BackendValidationComponentModule } from './components/backend-validatio
     AuthenticationLoginFormComponentModule,
     HomePageComponentModule,
     AuthenticationRegisterFormComponentModule,
-    BackendValidationComponentModule
+    BackendValidationComponentModule,
+    RegisterValidationComponentModule,
+    CrossValidationComponentModule
   ],
   exports: [RouterModule],
 })
